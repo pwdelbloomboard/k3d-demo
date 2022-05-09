@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: devops-toolkit
-        image: vfarcic/devops-toolkit-series
+        image: ghcr.io/pwdelbloomboard/ps-container
         ports:
         - containerPort: 80
         livenessProbe:
