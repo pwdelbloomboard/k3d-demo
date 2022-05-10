@@ -9,10 +9,11 @@ spec:
   ports:
   # port accessible inside the cluster
   # other pods can communicate through this port
+  # this is the firewall
   - port: 80
     # our pod listening on this port
     # our application in the container must be listening on this port
-    targetPort: 3001
+    targetPort: 80
     protocol: TCP
     name: http
   selector:
