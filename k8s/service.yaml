@@ -7,8 +7,10 @@ metadata:
 spec:
   type: ClusterIP
   ports:
+  # port accessible inside the cluster
   - port: 80
-    targetPort: 3001
+    # port to forward to inside pod
+    targetPort: 80
     protocol: TCP
     name: http
   selector:
