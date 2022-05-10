@@ -3,15 +3,15 @@ kind: Deployment
 metadata:
   name: dockerreactjs-yarn
   labels:
-    app: dockerreactjs-yarn
+    app: dockerreactjs-yarn-app
 spec:
   selector:
     matchLabels:
-      app: dockerreactjs-yarn
+      app: dockerreactjs-yarn-app
   template:
     metadata:
       labels:
-        app: dockerreactjs-yarn
+        app: dockerreactjs-yarn-app
     spec:
       containers:
       - name: dockerreactjs-yarn-container
