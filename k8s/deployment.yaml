@@ -17,7 +17,8 @@ spec:
       - name: dockerreactjs-yarn-container
         image: ghcr.io/pwdelbloomboard/ps-container
         ports:
-        - containerPort: 3001
+        # where the app can be reached inside the container
+        - containerPort: 80
         resources:
           limits:
             cpu: 100m
