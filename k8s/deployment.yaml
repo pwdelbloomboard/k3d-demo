@@ -1,17 +1,17 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: dockerreactjs-yarn-app
+  name: dockerreactjs-yarn
   labels:
-    app: dockerreactjs-yarn-app
+    app: dockerreactjs-yarn
 spec:
   selector:
     matchLabels:
-      app: dockerreactjs-yarn-app
+      app: dockerreactjs-yarn
   template:
     metadata:
       labels:
-        app: dockerreactjs-yarn-app
+        app: dockerreactjs-yarn
     spec:
       containers:
       - name: dockerreactjs-yarn-container

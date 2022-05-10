@@ -1,20 +1,27 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: dockerreactjs-yarn-service
+  name: dockerreactjs-yarn
   labels:
-    app: dockerreactjs-yarn-app
+    app: dockerreactjs-yarn
 spec:
   type: ClusterIP
   ports:
   # port accessible inside the cluster
   # other pods can communicate through this port
-  # this is the firewall
   - port: 80
     # our pod listening on this port
     # our application in the container must be listening on this port
     targetPort: 80
     protocol: TCP
     name: http
+  # port accessible inside the cluster
+  # other pods can communicate through this port
+  - port: 3001
+    # our pod listening on this port
+    # our application in the container must be listening on this port
+    targetPort: 3001
+    protocol: TCP
+    name: http
   selector:
-    app: dockerreactjs-yarn-app
+    app: dockerreactjs-yarn
