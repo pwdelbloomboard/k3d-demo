@@ -12,3 +12,4 @@ k8s/deployment.yaml >
       - name: devops-toolkit
         image: ghcr.io/pwdelbloomboard/ps-container
 ```
+ .
