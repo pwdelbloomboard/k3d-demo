@@ -18,7 +18,7 @@ spec:
         image: ghcr.io/pwdelbloomboard/ps-container
         ports:
         # where the port can be reached inside
-        - containerPort: 3000
+        - containerPort: 80
         resources:
           limits:
             cpu: 100m

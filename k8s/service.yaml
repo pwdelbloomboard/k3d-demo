@@ -12,7 +12,7 @@ spec:
   - port: 80
     # our pod listening on this port
     # our application in the container must be listening on this port
-    targetPort: 80
+    targetPort: 3000
     protocol: TCP
     name: http
   selector:
