@@ -1,31 +1,31 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: devops-toolkit
+  name: dockerreactjs-yarn-app
   labels:
-    app: devops-toolkit
+    app: dockerreactjs-yarn-app
 spec:
   selector:
     matchLabels:
-      app: devops-toolkit
+      app: dockerreactjs-yarn-app
   template:
     metadata:
       labels:
-        app: devops-toolkit
+        app: dockerreactjs-yarn-app
     spec:
       containers:
-      - name: devops-toolkit
+      - name: dockerreactjs-yarn-container
         image: ghcr.io/pwdelbloomboard/ps-container
         ports:
-        - containerPort: 80
+        - containerPort: 3001
         livenessProbe:
           httpGet:
             path: /
-            port: 80
+            port: 3001
         readinessProbe:
           httpGet:
             path: /
-            port: 80
+            port: 3001
         resources:
           limits:
             cpu: 100m
