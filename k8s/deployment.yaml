@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: dockerreactjs-yarn
+  name: dockerreactjs-yarn-app
   labels:
     app: dockerreactjs-yarn-app
 spec:
@@ -17,8 +17,8 @@ spec:
       - name: dockerreactjs-yarn-container
         image: ghcr.io/pwdelbloomboard/ps-container
         ports:
-        # where the app can be reached inside the container
-        - containerPort: 80
+        # where the port can be reached inside
+        - containerPort: 3000
         resources:
           limits:
             cpu: 100m
